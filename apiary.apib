@@ -5,7 +5,7 @@ SinTrafico API is a *Traffic Information System* service.
 # Group Layers
 **SinTrafico Layers API** enables to visualize traffic conditions in a map.
 
-## Real Time Traffic Layer [/layers/traffic/x/y/z.format{?predict}]
+## Real Time Traffic Layer [/layers/traffic/{x}/{y}/{z}.{format}{?predict}]
 Real time traffic layer updated every 15 minutes.
 
 + Parameters
@@ -29,7 +29,7 @@ Real time traffic layer updated every 15 minutes.
             {image data here}
 
 
-## Comparative Traffic Layer [/layers/comparative/x/y/z.format{?predict}]
+## Comparative Traffic Layer [/layers/comparative/{x}/{y}/{z}.{format}{?predict}]
 Comparative traffic layer updated every 15 minutes.
 
 + Parameters
@@ -53,7 +53,7 @@ Comparative traffic layer updated every 15 minutes.
             {image data here}
 
 # Group Routing
-## Routing [/routing?origin&{destination}]
+## Routing [/routing?{origin}&{destination}]
 A Routing service that uses real-time traffic information to provide the best route available.
 
 + Parameters
