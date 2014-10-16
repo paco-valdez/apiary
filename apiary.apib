@@ -13,7 +13,7 @@ Real time traffic layer updated every 15 minutes.
     + y (required, number, `1`) ... Numeric `Y` coordinate of the TMS tile.
     + z (required, number, `1`) ... Numeric `Z` zoom level of the TMS tile.
     + format (required, text, `png`) ... Format of the traffic layer png or json (vector tiles).
-    + predict (optional, time, `2D15:00Z  Wednesday at 15 o'clock in UTC`) ... **n** D **hh**: **mm** Z . time in UTC where **n** is the day of week (Zero = Monday), **hh** left zero padded hours, and **mm** left zero padded minutes number. 
+    + predict (optional, time, `2D15:00Z`) ... **n** D **hh**: **mm** Z . time in UTC where **n** is the day of week (Zero = Monday), **hh** left zero padded hours, and **mm** left zero padded minutes number. Example: 2D15:00Z  Wednesday at 15 o'clock in UTC
 
 ### Get layer [GET]
 + Request /layers/traffic/11/453/872.png (application/json)
