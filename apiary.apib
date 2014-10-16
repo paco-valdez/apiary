@@ -1,0 +1,75 @@
+FORMAT: 1A
+
+# SinTrafico
+SinTrafico API is a *Traffic Information System* service.
+# Group Layers
+**SinTrafico Layers API** enables to visualize traffic conditions in a map.
+
+## Real Traffic Layer [/layers/traffic/x/y/z.format{?predict}]
+Real time traffic layer updated every 15 minutes.
+
++ Parameters
+    + x (required, number, `1`) ... Numeric `X` coordinate of the TMS tile.
+    + y (required, number, `1`) ... Numeric `Y` coordinate of the TMS tile.
+    + z (required, number, `1`) ... Numeric `Z` zoom level of the TMS tile.
+    + format (required, text, `png`) ... Format of the traffic layer png or json (vector tiles).
+    + predict (optional, time, `2D15:00Z  Wednesday at 15 o'clock in UTC`) ... **n** D **hh**: **mm** Z . time in UTC where **n** is the day of week (Zero = Monday), **hh** left zero padded hours, and **mm** left zero padded minutes number. 
+
+### Get layer [GET]
++ Request /layers/traffic/11/453/872.png (application/json)
+        
++ Response 200 (image/png)
+    
+    + Header
+    
+            Content-Length: 14580053
+        
+    + Body
+    
+            {image data here}
+
+
+## Comparative Traffic Layer [/layers/comparative/x/y/z.format{?predict}]
+Comparative traffic layer updated every 15 minutes.
+
++ Parameters
+    + x (required, number, `1`) ... Numeric `X` coordinate of the TMS tile.
+    + y (required, number, `1`) ... Numeric `Y` coordinate of the TMS tile.
+    + z (required, number, `1`) ... Numeric `Z` zoom level of the TMS tile.
+    + format (required, text, `png`) ... Format of the traffic layer png or json (vector tiles).
+    + predict (optional, time, `2D15:00Z  Wednesday at 15 o'clock in UTC`) ... **n** D **hh**: **mm** Z . time in UTC where **n** is the day of week (Zero = Monday), **hh** left zero padded hours, and **mm** left zero padded minutes number. 
+
+### Get layer [GET]
++ Request /layers/traffic/11/453/872.png (application/json)
+        
++ Response 200 (image/png)
+    
+    + Header
+    
+            Content-Length: 14580053
+        
+    + Body
+    
+            {image data here}
+
+# Group Routing
+## Note [/routing?origin&{destination}]
+A single Note object with all its details
+
++ Parameters
+    + origin (required, number, `1`) ... Numeric `id` of the Note to perform action with. Has example value.
+    + destination (required, number, `1`) ... Numeric `id` of the Note to perform action with. Has example value.
+
+### Retrieve a Note [GET]
++ Response 200 (application/json)
+
+    + Header
+
+            X-My-Header: The Value
+
+    + Body
+
+            { "id": 2, "title": "Pick-up posters from post-office" }
+
+### Remove a Note [DELETE]
++ Response 204
