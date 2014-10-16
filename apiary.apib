@@ -5,7 +5,7 @@ SinTrafico API is a *Traffic Information System* service.
 # Group Layers
 **SinTrafico Layers API** enables to visualize traffic conditions in a map.
 
-## Real Traffic Layer [/layers/traffic/x/y/z.format{?predict}]
+## Real Time Traffic Layer [/layers/traffic/x/y/z.format{?predict}]
 Real time traffic layer updated every 15 minutes.
 
 + Parameters
@@ -53,12 +53,12 @@ Comparative traffic layer updated every 15 minutes.
             {image data here}
 
 # Group Routing
-## Note [/routing?origin&{destination}]
+## Routing [/routing?origin&{destination}]
 A single Note object with all its details
 
 + Parameters
-    + origin (required, number, `1`) ... Numeric `id` of the Note to perform action with. Has example value.
-    + destination (required, number, `1`) ... Numeric `id` of the Note to perform action with. Has example value.
+    + origin (required, text, `19.8523,-88.264`) ... Numeric `id` of the Note to perform action with. Has example value.
+    + destination (optional, number, `1`) ... Numeric `id` of the Note to perform action with. Has example value.
 
 ### Retrieve a Note [GET]
 + Response 200 (application/json)
