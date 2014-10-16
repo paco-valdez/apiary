@@ -54,13 +54,13 @@ Comparative traffic layer updated every 15 minutes.
 
 # Group Routing
 ## Routing [/routing?origin&{destination}]
-A single Note object with all its details
+A Routing service that uses real-time traffic information to provide the best route available.
 
 + Parameters
-    + origin (required, text, `19.8523,-88.264`) ... Numeric `id` of the Note to perform action with. Has example value.
-    + destination (optional, number, `1`) ... Numeric `id` of the Note to perform action with. Has example value.
+    + origin (required, text, `19.8523,-88.264`) ... Coordinates (lat,long) of the origin
+    + destination (optional, text, `19.782,-88.822`) ... Coordinates (lat,long) of the destination, if it's not received, traffic info of the origin point will be provided.
 
-### Retrieve a Note [GET]
+### Retrieve a Route [GET]
 + Response 200 (application/json)
 
     + Header
@@ -71,5 +71,4 @@ A single Note object with all its details
 
             { "id": 2, "title": "Pick-up posters from post-office" }
 
-### Remove a Note [DELETE]
-+ Response 204
+
